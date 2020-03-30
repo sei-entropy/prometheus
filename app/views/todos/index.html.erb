@@ -1,0 +1,7 @@
+<h2>All Todos</h2>
+
+<% @todos.each do |todo| %>
+  <div>
+    <%= link_to todo.title, todo %>
+  </div>
+<% end %>

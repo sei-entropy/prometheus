@@ -1,0 +1,13 @@
+<%= form_with model: @todo, local: true do |form| %>
+  <p>
+    Title: 
+    <%= form.text_field :title %>
+  </p>
+
+  <p>
+    Completed:
+    <%= form.check_box :completed %>
+  </p>
+
+  <%= form.submit %>
+<% end %>
