@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
-  get 'todos/new', to: 'todos#new'
-  get 'todos/:id', to: 'todos#show', as: 'todo'
-  post 'todos', to: 'todos#create'
-  get 'todos', to: 'todos#index'
+  devise_for :users
+  #get 'todos/new', to: 'todos#new'
+  #get 'todos/:id', to: 'todos#show', as: 'todo'
+  #post 'todos', to: 'todos#create'
+  #get 'todos', to: 'todos#index'
+
+  resources :todos
 
   get 'pages/home'
   get 'pages/contact'

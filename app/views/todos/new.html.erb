@@ -1,3 +1,20 @@
 <h2>New Todo</h2>
 
+<% if @todo.errors.any? %>
+  <h3>We've got problems!</h3>
+
+  <h4>
+    <%= pluralize(@todo.errors.count, 'error') %>
+    stopped us from saving the task:
+  </h4>
+
+  <ul>
+    <% @todo.errors.full_messages.each do |msg| %>
+      <li>
+        <%= msg %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
 <%= render partial: 'form', locals: { todo: @todo } %>

@@ -1,0 +1,13 @@
+Roles:
+  1. User
+  2. Admin
+
+User Model
+  - admin:boolean
+
+
+if current_user.admin
+  # Delete all other users
+else
+  redirect_to root_path
+end
